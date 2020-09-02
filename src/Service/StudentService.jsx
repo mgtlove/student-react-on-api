@@ -4,8 +4,8 @@ import axios from 'axios';
 // custom hook for performing get requests
 export const useFetch = (searchMethod, searchValue) =>{
 
-    const getAll = 'http://localhost:8080/api/students';
-    const getById = 'http://localhost:8080/api/students/' + searchValue;
+    const getAll = 'http://studentrestapi-env.eba-upgrfp5s.us-east-2.elasticbeanstalk.com/api/students';
+    const getById = 'http://studentrestapi-env.eba-upgrfp5s.us-east-2.elasticbeanstalk.com/api/students/' + searchValue;
     let url = null;
 
     // allows us to use same hook for different get requests and parameters
@@ -42,13 +42,13 @@ export const useFetch = (searchMethod, searchValue) =>{
 };
 
 export function deleteStudent(studentId) {
-    return axios.delete('http://localhost:8080/api/delete/student/' + studentId);
+    return axios.delete('http://studentrestapi-env.eba-upgrfp5s.us-east-2.elasticbeanstalk.com/' + studentId);
 }
 
 export function createStudent(student) {
-    return axios.post('http://localhost:8080/api/add/student', student);
+    return axios.post('http://studentrestapi-env.eba-upgrfp5s.us-east-2.elasticbeanstalk.com', student);
 }
 
 export function updateStudent(student) {
-    return axios.put('http://localhost:8080/api/update/student', student);
+    return axios.put('http://studentrestapi-env.eba-upgrfp5s.us-east-2.elasticbeanstalk.com', student);
 }
