@@ -1,12 +1,14 @@
 import React from 'react';
-import logo from './logo.svg';
-import FuncCardSet from './Components/FuncCardSet';
 import './App.css';
+import CardInterface from './components/CardInterface';
+import SiteNav from './components/SiteNav';
 
 function App() {
+
   return (
-    <div className="App">
-      <FuncCardSet/>
+    <div className="container">
+      <SiteNav/>
+      <CardInterface/>
     </div>
   );
 }
